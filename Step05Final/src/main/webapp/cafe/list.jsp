@@ -67,7 +67,7 @@
 				 	<td><%=tmp.getNum() %></td>
 				 	<td><%=tmp.getWriter()%></td>
 				 	<td>
-				 		<a href="private/view.jsp?num=<%=tmp.getNum() %>"><%=tmp.getTitle()%></a>
+				 		<a href="view.jsp?num=<%=tmp.getNum() %>"><%=tmp.getTitle()%></a>
 				 	</td>
 				 	<td><%=tmp.getViewCount()%></td>
 				 	<td><%=tmp.getRegdate()%></td>

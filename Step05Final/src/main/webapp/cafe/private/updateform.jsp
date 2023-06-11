@@ -15,7 +15,7 @@
 </head>
 <body>
 	<div class="container">
-		<h1>뷰&수정&삭제 페이지입니다.</h1>
+		<h1>수정 페이지입니다.</h1>
 		<form action="update.jsp" method="post">
 			<div>
 				<label class="form-label" for="num">글 번호</label>

@@ -3,6 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%  int num = Integer.parseInt(request.getParameter("num"));
+	String id = (String)session.getAttribute("id");
 	CafeDto dto = CafeDao.getInstance().getData(num);
 	boolean count = CafeDao.getInstance().viewCount(num);
 %>
@@ -16,7 +17,7 @@
 </head>
 <body>
 	<div class="container">
-		<h1>뷰&수정&삭제 페이지입니다.</h1>
+		<h1>뷰 페이지입니다.</h1>
 	
 			<div>
 				<label for="num" class="form-label">글 번호</label>
@@ -39,8 +40,8 @@
 				<textarea class="form-control" name="content" id="content"  rows="10" readonly><%=dto.getContent() %></textarea>
 			</div>
 		<button type="button" onclick="location.href='${pageContext.request.contextPath }/cafe/list.jsp'">목록으로</button>
-		<button type="button" onclick="location.href='updateform.jsp?num=<%=num%>'">수정</button>
-		<button type="button" onclick="location.href='delete.jsp?num=<%=num%>'">삭제</button>
+		<button type="button" onclick="location.href='${pageContext.request.contextPath }/cafe/private/updateform.jsp?num=<%=num%>'">수정</button>
+		<button type="button" onclick="location.href='${pageContext.request.contextPath }/cafe/private/delete.jsp?num=<%=num%>'">삭제</button>
 	</div>
 </body>
 </html>
