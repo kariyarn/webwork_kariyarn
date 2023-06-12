@@ -1,22 +1,12 @@
 <%@page import="test.cafe.dao.CafeDao"%>
-<%@page import="test.cafe.dto.CafeDto"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
+	//1. GET 방식 파라미터로 전달되는 삭제할 파일의 글번호 읽어오기
 	int num = Integer.parseInt(request.getParameter("num"));
-	CafeDto dto = CafeDao.getInstance().getData(num);
-	
-	String id = (String)session.getAttribute("id");
-	if(!dto.getWriter().equals(id)){
-		response.sendError(HttpServletResponse.SC_FORBIDDEN, "작성자가 일치하지 않습니다.");
-		return;
-	}
+	//2. DB에서 삭제하기.
 	boolean isSuccess = CafeDao.getInstance().delete(num);
-	if(isSuccess){
-		String cPath = request.getContextPath();
-		response.sendRedirect(cPath+"/cafe/list.jsp");
-	}else{
-		String cPath = request.getContextPath();
-		response.sendRedirect(cPath+"/cafe/view.jsp?=num=" + num);
-	}
+	//3. 응답하기
+	String cPath = request.getContextPath();
+	response.sendRedirect(cPath+"/cafe/list.jsp");
 %>

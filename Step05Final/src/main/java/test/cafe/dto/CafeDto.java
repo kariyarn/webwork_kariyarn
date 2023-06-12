@@ -7,8 +7,8 @@ public class CafeDto {
 	private String content;
 	private int viewCount;
 	private String regdate;
-	private int startNum;
-	private int endNum;
+	private int startRowNum;
+	private int endRowNum;
 
 	//생성자
 	public CafeDto() {}
@@ -17,8 +17,8 @@ public class CafeDto {
 		return num;
 	}
 
-	public CafeDto(int num, String writer, String title, String content, int viewCount, String regdate, int startNum,
-			int endNum) {
+	public CafeDto(int num, String writer, String title, String content, int viewCount, String regdate, int startRowNum,
+			int endRowNum) {
 		super();
 		this.num = num;
 		this.writer = writer;
@@ -26,8 +26,8 @@ public class CafeDto {
 		this.content = content;
 		this.viewCount = viewCount;
 		this.regdate = regdate;
-		this.startNum = startNum;
-		this.endNum = endNum;
+		this.startRowNum = startRowNum;
+		this.endRowNum = endRowNum;
 	}
 
 	public void setNum(int num) {
@@ -42,20 +42,20 @@ public class CafeDto {
 		this.writer = writer;
 	}
 
-	public int getStartNum() {
-		return startNum;
+	public int getStartRowNum() {
+		return startRowNum;
 	}
 
-	public void setStartNum(int startNum) {
-		this.startNum = startNum;
+	public void setStartRowNum(int startRowNum) {
+		this.startRowNum = startRowNum;
 	}
 
-	public int getEndNum() {
-		return endNum;
+	public int getEndRowNum() {
+		return endRowNum;
 	}
 
-	public void setEndNum(int endNum) {
-		this.endNum = endNum;
+	public void setEndRowNum(int endRowNum) {
+		this.endRowNum = endRowNum;
 	}
 
 	public String getTitle() {
