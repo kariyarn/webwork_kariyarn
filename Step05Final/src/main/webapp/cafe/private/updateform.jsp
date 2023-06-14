@@ -17,6 +17,14 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" />
 </head>
 <body>
+	<nav aria-label="breadcrumb">
+	  <ol class="breadcrumb">
+	    <li class="breadcrumb-item"><a href="../index.jsp">Home</a></li>
+	    <li class="breadcrumb-item"><a href="list.jsp">Cafe</a></li>
+	    <li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/cafe/detail.jsp?num=<%=dto.getNum()%>">Detail</a></li>
+	    <li class="breadcrumb-item acitve"></a>Update</li>
+	  </ol>
+	</nav>
    <div class="container">
       <h1>글 수정양식</h1>
       <form action="update.jsp" method="post">
