@@ -22,7 +22,7 @@
 	<!-- 외부 javascript 로딩 -->
 	<script src="${pageContext.request.contextPath }/js/gura_util.js"></script>
 	<script>
-	
+
 		document.querySelector("#myForm2").addEventListener("submit", (e)=>{
 			e.preventDefault();
 			//gura_util.js 안에 있는 ajaxFormPromise() 함수 활용하기

@@ -20,7 +20,7 @@
 			console.log("-----");
 			
 			//fetch 함수가 무얼 하는 함수인지 잠시 테스트해 보세요 
-			//위의 링크를 눌렀을때와 차이점은 ? 
+			//위의 링크를 눌렀을때와 차이점? 
 			fetch("${pageContext.request.contextPath }/index.jsp")
 			.then(function(response){
 				return response.text();

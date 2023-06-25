@@ -18,7 +18,7 @@
 			fetch("get_msg2.jsp")
 			.then(res=>res.text())
 			.then((data)=>{
-				//data 는  [ "어쩌구" , "저쩌구" , "이렇쿵" ] 형식의 json 문자열이다.
+				//data 는  [ "어쩌구" , "저쩌구" , "이러쿵" ] 형식의 json 문자열이다.
 				console.log(data);
 				//실제 배열(object) 로 바꾸기(json 형식에 어긋나면 에러가 발생한다)
 				const list=JSON.parse(data);
